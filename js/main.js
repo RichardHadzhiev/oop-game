@@ -14,14 +14,19 @@ class Player{
 
     }
     moveLeft(){
-        this.positionX--;
-        this.playerElm.style.left = this.positionX + "vw"
+        if(this.positionX > 0){
+            this.positionX--;
+            this.playerElm.style.left = this.positionX + "vw"
+        }
+        
 
 
     }
     moveRight(){
-        this.positionX++;
-        this.playerElm.style.left = this.positionX + "vw";
+        if(this.positionX < 100 - this.width){
+            this.positionX++;
+            this.playerElm.style.left = this.positionX + "vw";
+        }
 
     }  
 }
